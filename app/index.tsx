@@ -1,6 +1,6 @@
 import { View, Button } from 'react-native'
 import React from 'react'
-import { Link, useRouter } from 'expo-router'
+import { useRouter } from 'expo-router'
 
 const LoginPage = () => {
     const router = useRouter();
@@ -9,7 +9,7 @@ const LoginPage = () => {
     <View>
       <Button title="View Disclaimer" onPress={() => router.push("/(aux)/disclaimer")} />
       <Button title="Create Account" onPress={() => router.push("/register")} />
-      <Button title="Login" onPress={() => router.replace("/(tabs)/(one)/one")} />
+      <Button title="Login" onPress={() => router.replace("/(tabs)/(tabOne)/tabOne")} />
     </View>
   )
 }

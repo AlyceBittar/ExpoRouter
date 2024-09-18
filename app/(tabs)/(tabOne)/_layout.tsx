@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <Stack>
         <Stack.Screen  
-          name='one' // Name of file to route to (file-based routing)
+          name='tabOne' // Name of file to route to (file-based routing)
           options={{
             title: 'Home' // Header title for this screen
           }}
