@@ -2,10 +2,10 @@
   "expo": {
     "name": "ExpoRouter",
     "slug": "ExpoRouter",
+    "scheme": "expo-router",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",

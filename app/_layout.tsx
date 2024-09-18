@@ -13,9 +13,9 @@ export {
   ErrorBoundary,
 } from 'expo-router';
 
+// Define the first page to rout users
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: 'index',
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -45,14 +45,31 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
+// This is where you want to define screen info (ie. any stack options/settings)
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        <Stack.Screen  
+          name='index' // Name of file to route to (file-based routing)
+          options={{
+            title: 'Welcome' // Header title for this screen
+          }}
+        />
+        <Stack.Screen  
+          name='register' // Name of file to route to (file-based routing)
+          options={{
+            title: 'Register' // Header title for this screen
+          }}
+        />
+        <Stack.Screen  
+          name='(tabs)'  // Name of file to route to (file-based routing)
+          options={{
+            headerShown: false // Hide the header, since navigation stack shows an extra header when routing here
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
